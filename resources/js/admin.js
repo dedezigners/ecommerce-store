@@ -1,12 +1,12 @@
 import Vue from 'vue';
-import App from './components/frontend/App';
+import Admin from './components/admin/Admin';
 require('./bootstrap');
 window.Vue = require('vue');
 
 const app = new Vue({
     el: '#app',
-    template: '<app/>',
+    template: '<admin/>',
     components: {
-        App
+        Admin
     }
 });
