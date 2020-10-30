@@ -1,3 +1,8 @@
 <template>
-    <h1>Frontend Template</h1>
+    <div>
+        <app-header />
+        <router-view />
+        <app-footer />
+        <sign-in />
+    </div>
 </template>

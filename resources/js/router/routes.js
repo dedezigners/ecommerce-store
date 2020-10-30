@@ -1,4 +1,4 @@
-import Home from '../components/frontend/App';
+import Home from '../components/frontend/HomePage';
 import Admin from '../components/admin/Admin';
 
 function requireAuth(to, from, next) {

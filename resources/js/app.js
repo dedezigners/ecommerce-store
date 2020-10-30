@@ -1,14 +1,14 @@
 import Vue from 'vue';
 import App from './components/frontend/App';
-import routes from './router/index';
+import router from './router/index';
 import store from './store/index';
 
 // require('./bootstrap');
-// window.Vue = require('vue');
+require('./plugins/basic-components');
 
 new Vue({
     el: '#app',
-    routes,
+    router,
     store,
     template: '<app/>',
     components: {
