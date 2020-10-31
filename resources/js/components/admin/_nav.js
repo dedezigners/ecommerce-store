@@ -3,7 +3,12 @@ export default [
     _name: 'CSidebarNav',
     _children: [
       { _name: 'CSidebarNavItem', name: 'Dashboard', to: '/admin/dashboard', icon: 'cil-speedometer' },
+      { _name: 'CSidebarNavTitle', _children: ['Store'] },
       { _name: 'CSidebarNavItem', name: 'Categories', to: '/admin/categories', icon: 'cil-apps' },
+      { _name: 'CSidebarNavItem', name: 'Tags', to: '/admin/categories', icon: 'cil-apps' },
+      { _name: 'CSidebarNavItem', name: 'Products', to: '/admin/categories', icon: 'cil-apps' },
+      { _name: 'CSidebarNavItem', name: 'Orders', to: '/admin/categories', icon: 'cil-apps' },
+      { _name: 'CSidebarNavTitle', _children: ['Template Settings'] },
       { _name: 'CSidebarNavItem', name: 'Experiences', to: '/admin/experiences', icon: 'cil-vector' },
       { _name: 'CSidebarNavItem', name: 'Music Genres', to: '/admin/music-geners', icon: 'cil-music-note' },
       { _name: 'CSidebarNavItem', name: 'Skills', to: '/admin/skills', icon: 'cil-command' },
@@ -28,7 +33,12 @@ export default [
           { name: 'Trash', to: '/blog/trash-posts' },
         ]
       },
-      // { _name: 'CSidebarNavTitle', _children: ['Pages'] }
+      { _name: 'CSidebarNavTitle', _children: ['Default Preview'] },
+      {
+        _name: 'CSidebarNavItem', name: 'Live Preview', href: 'http://ecommerce.live/', icon: { name: 'cil-layers', class: 'text-white' },
+        _class: 'bg-info text-white',
+        target: '_blank'
+      }
     ]
   }
 ]

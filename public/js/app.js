@@ -38464,17 +38464,11 @@ var CoreuiVueCharts = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _TheContainer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TheContainer */ "./resources/js/components/admin/TheContainer.vue");
 //
 //
 //
 //
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    TheContainer: _TheContainer__WEBPACK_IMPORTED_MODULE_0__["default"]
-  }
-});
+/* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
 
@@ -38960,7 +38954,7 @@ __webpack_require__.r(__webpack_exports__);
       selected: 'Month',
       tableItems: [{
         avatar: {
-          url: '/img/avatars/1.jpg',
+          url: '/assets/admin/img/avatars/1.jpg',
           status: 'success'
         },
         user: {
@@ -38983,7 +38977,7 @@ __webpack_require__.r(__webpack_exports__);
         activity: '10 sec ago'
       }, {
         avatar: {
-          url: '/img/avatars/2.jpg',
+          url: '/assets/admin/img/avatars/2.jpg',
           status: 'danger'
         },
         user: {
@@ -39006,7 +39000,7 @@ __webpack_require__.r(__webpack_exports__);
         activity: '5 minutes ago'
       }, {
         avatar: {
-          url: '/img/avatars/3.jpg',
+          url: '/assets/admin/img/avatars/3.jpg',
           status: 'warning'
         },
         user: {
@@ -39029,7 +39023,7 @@ __webpack_require__.r(__webpack_exports__);
         activity: '1 hour ago'
       }, {
         avatar: {
-          url: '/img/avatars/4.jpg',
+          url: '/assets/admin/img/avatars/4.jpg',
           status: ''
         },
         user: {
@@ -39052,7 +39046,7 @@ __webpack_require__.r(__webpack_exports__);
         activity: 'Last month'
       }, {
         avatar: {
-          url: '/img/avatars/5.jpg',
+          url: '/assets/admin/img/avatars/5.jpg',
           status: 'success'
         },
         user: {
@@ -39075,7 +39069,7 @@ __webpack_require__.r(__webpack_exports__);
         activity: 'Last week'
       }, {
         avatar: {
-          url: '/img/avatars/6.jpg',
+          url: '/assets/admin/img/avatars/6.jpg',
           status: 'danger'
         },
         user: {
@@ -44163,7 +44157,7 @@ var render = function() {
                 _c("div", { staticClass: "c-avatar" }, [
                   _c("img", {
                     staticClass: "c-avatar-img ",
-                    attrs: { src: "/img/avatars/6.jpg" }
+                    attrs: { src: "/assets/admin/img/avatars/6.jpg" }
                   })
                 ])
               ])
@@ -65890,10 +65884,31 @@ __webpack_require__.r(__webpack_exports__);
     to: '/admin/dashboard',
     icon: 'cil-speedometer'
   }, {
+    _name: 'CSidebarNavTitle',
+    _children: ['Store']
+  }, {
     _name: 'CSidebarNavItem',
     name: 'Categories',
     to: '/admin/categories',
     icon: 'cil-apps'
+  }, {
+    _name: 'CSidebarNavItem',
+    name: 'Tags',
+    to: '/admin/categories',
+    icon: 'cil-apps'
+  }, {
+    _name: 'CSidebarNavItem',
+    name: 'Products',
+    to: '/admin/categories',
+    icon: 'cil-apps'
+  }, {
+    _name: 'CSidebarNavItem',
+    name: 'Orders',
+    to: '/admin/categories',
+    icon: 'cil-apps'
+  }, {
+    _name: 'CSidebarNavTitle',
+    _children: ['Template Settings']
   }, {
     _name: 'CSidebarNavItem',
     name: 'Experiences',
@@ -65938,8 +65953,20 @@ __webpack_require__.r(__webpack_exports__);
       name: 'Trash',
       to: '/blog/trash-posts'
     }]
-  } // { _name: 'CSidebarNavTitle', _children: ['Pages'] }
-  ]
+  }, {
+    _name: 'CSidebarNavTitle',
+    _children: ['Default Preview']
+  }, {
+    _name: 'CSidebarNavItem',
+    name: 'Live Preview',
+    href: 'http://ecommerce.live/',
+    icon: {
+      name: 'cil-layers',
+      "class": 'text-white'
+    },
+    _class: 'bg-info text-white',
+    target: '_blank'
+  }]
 }]);
 
 /***/ }),
