@@ -28,9 +28,12 @@ class User {
         return this.hasToken()
     }
 
-    logout() {
-        Storage.clear()
-        window.location = '/'
+    logout(error = false) {
+        Storage.clear();
+
+        if (!error) {
+            window.location = '/';
+        }
     }
 
     name() {

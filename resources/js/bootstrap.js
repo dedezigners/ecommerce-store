@@ -21,6 +21,15 @@ try {
 
 window.axios = require('axios');
 
+axios.interceptors.response.use (response => response,
+    error => {
+      if (error.response.status === 401 && User.loggedIn()) {
+        User.logout(true);
+      }
+      throw error;
+    }
+);
+
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /**
