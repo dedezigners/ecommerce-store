@@ -2,20 +2,19 @@ import Storage from './storage'
 
 class User {
 
-    login(data) {
-        return axios.post(`login`, data);
-    }
-
     responseAfterLogin(res) {
-        const access_token = res.data.access_token
-        const user = res.data.user
-        console.log(user)
+        const accessToken = res.data.access_token;
+        const admin = res.data.admin;
 
-        if (access_token && user && user.name) {
-            Storage.store(access_token, user, user.name)
+        if (accessToken) {
+            Storage.store(accessToken, admin);
+
+            if (admin) {
+                window.location = '/admin'
+            }
         }
 
-        window.location = '/admin'
+        return true;
     }
 
     hasToken() {
@@ -24,21 +23,14 @@ class User {
     }
 
     loggedIn() {
-        return true;
-        return this.hasToken()
+        return this.hasToken();
     }
 
-    logout(error = false) {
+    logout(redirect = false) {
         Storage.clear();
 
-        if (!error) {
+        if (redirect) {
             window.location = '/';
-        }
-    }
-
-    name() {
-        if (this.loggedIn()) {
-            return Storage.getUser()
         }
     }
 

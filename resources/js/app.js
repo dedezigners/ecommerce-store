@@ -6,6 +6,10 @@ import store from './store/index';
 // require('./bootstrap');
 require('./plugins/basic-components');
 
+import User from './helpers/user';
+window.User = User;
+require('./bootstrap');
+
 new Vue({
     el: '#app',
     router,

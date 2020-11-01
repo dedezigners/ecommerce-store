@@ -1,24 +1,30 @@
+import User from '../helpers/user';
 import Home from '../components/frontend/HomePage';
-import Admin from '../components/admin/Admin';
+import Account from '../components/auth/Account';
 import TheContainer from '../components/admin/TheContainer';
 import Dashboard from '../components/admin/Dashboard';
 
 function requireAuth(to, from, next) {
-    return next();
     let auth = User.loggedIn();
+    let path = to.path
+    let pathInitial = path.substring(1, 6);
     
-    return (!auth && next({ name: "login" })) || next();
+    if (!auth && pathInitial === 'admin') {
+        window.location = '/account';
+    } else {
+        return (!auth && next({ name: "account" })) || next();
+    }
 }
 
 export const routes = [
     { path: '/', name: 'index', component: Home },
-    { path: '/login', name: 'login', component: Home },
+    { path: '/account', name: 'account', component: Account },
     {
         path: '/admin',
         redirect: '/admin/dashboard',
         name: 'admin',
         component: TheContainer,
-        // beforeEnter: requireAuth,
+        beforeEnter: requireAuth,
         children: [
             { path: 'dashboard', name: 'dashboard', component: Dashboard },
         ]

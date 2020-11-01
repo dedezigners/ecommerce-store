@@ -20,15 +20,21 @@ class AuthController extends Controller
             'last_name' => 'required|string|max:20',
             'email' => 'required|string|email|max:255|unique:users',
             'username' => 'required|string|alpha_dash|min:4|max:255|unique:users',
-            'password' => 'required|min:8'
+            'password' => 'required|min:8|confirmed'
         ]);
 
-        User::create($request->all());
-        return $this->login($request);
+        return "test";
+        // User::create($request->all());
+        // return $this->login($request);
     }
 
     public function login(Request $request)
     {
+        $this->validate($request, [
+            'email' => 'required|email',
+            'password' => 'required'
+        ]);
+
         $credentials = $request->only('email', 'password');
 
         if ($token = $this->guard()->attempt($credentials)) {

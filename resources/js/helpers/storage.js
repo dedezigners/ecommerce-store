@@ -3,6 +3,10 @@ class Storage {
     storeToken(token) {
         localStorage.setItem('token', token);
     }
+    
+    storeAdmin(admin) {
+        localStorage.setItem('admin', admin);
+    }
 
     storeUser(user) {
         localStorage.setItem('user', JSON.stringify(user));
@@ -12,16 +16,14 @@ class Storage {
         localStorage.setItem('name', name);
     }
 
-    store(token, user, name) {
+    store(token, admin) {
         this.storeToken(token);
-        this.storeUser(user);
-        this.storeName(name);
+        this.storeAdmin(admin);
     }
     
     clear() {
         localStorage.removeItem('token');
-        localStorage.removeItem('name');
-        localStorage.removeItem('user');
+        localStorage.removeItem('admin');
     }
 
     getToken() {

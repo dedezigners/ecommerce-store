@@ -75,7 +75,8 @@ export default {
   },
   methods: {
     logoutMe() {
-      User.logout();
+      axios.post('auth/logout');
+      User.logout(true);
     }
   }
 }

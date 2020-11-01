@@ -6,7 +6,7 @@
 				<div class="row small-gutters">
 					<div class="col-xl-3 col-lg-3 d-lg-flex align-items-center">
 						<div id="logo">
-							<a href="/"><img src="/assets/template/img/logo.svg" alt="" width="100" height="35"></a>
+							<router-link to="/"><img src="/assets/template/img/logo.svg" alt="" width="100" height="35"></router-link>
 						</div>
 					</div>
 					<nav class="col-xl-6 col-lg-7">
@@ -23,11 +23,11 @@
 								<a href="#" class="open_close" id="close_in"><i class="ti-close"></i></a>
 							</div>
 							<ul>
-								<li><a href="/">Home</a></li>
-								<li><a href="/about">About</a></li>
-								<li><a href="/shop">Shop</a></li>
-								<li><a href="/blog">Blog</a></li>
-								<li><a href="/contact-us">Contact Us</a></li>
+								<li><router-link to="/">Home</router-link></li>
+								<li><router-link to="/about">About</router-link></li>
+								<li><router-link to="/shop">Shop</router-link></li>
+								<li><router-link to="/blog">Blog</router-link></li>
+								<li><router-link to="/contact-us">Contact Us</router-link></li>
 							</ul>
 						</div>
 					</nav>
@@ -150,7 +150,28 @@
 							<li>
 								<a href="#0" class="wishlist"><span>Wishlist</span></a>
 							</li>
-							<li><a href="#sign-in-dialog" id="sign-in" class="access_link"><span>Account</span></a></li>
+							<li>
+								<div class="dropdown dropdown-access">
+									<a href="#!" class="access_link"><span>Account</span></a>
+									<div class="dropdown-menu">
+										<router-link to="/account" class="btn_1">Sign In or Sign Up</router-link>
+										<ul>
+											<li>
+												<a href="track-order.html"><i class="ti-truck"></i>Track your Order</a>
+											</li>
+											<li>
+												<a href="account.html"><i class="ti-package"></i>My Orders</a>
+											</li>
+											<li>
+												<a href="account.html"><i class="ti-user"></i>My Profile</a>
+											</li>
+											<li>
+												<a href="help.html"><i class="ti-help-alt"></i>Help and Faq</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
 							<li>
 								<a href="javascript:void(0);" class="btn_search_mob"><span>Search</span></a>
 							</li>

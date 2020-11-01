@@ -6,13 +6,12 @@ import store from './store/index';
 import CoreuiVue from '@coreui/vue';
 import { iconsSet as icons } from './assets/icons/icons.js';
 
-// require('./bootstrap');
-
-Vue.config.performance = true
-Vue.use(CoreuiVue)
+Vue.config.performance = true;
+Vue.use(CoreuiVue);
 
 import User from './helpers/user';
 window.User = User;
+require('./bootstrap');
 
 new Vue({
     el: '#app',

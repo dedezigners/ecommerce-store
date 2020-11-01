@@ -30,7 +30,14 @@ axios.interceptors.response.use (response => response,
     }
 );
 
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+const token = User.token();
+axios.defaults.baseURL = 'http://ecommerce.live/api';
+axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+axios.defaults.headers.common['Content-Type'] = 'application/json';
+axios.defaults.headers.common['Accept'] = 'application/json';
+if (token) {
+  axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+}
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

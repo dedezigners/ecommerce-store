@@ -22,11 +22,10 @@
 						  <span class="checkmark"></span>
 						</label>
 					</div>
-					<!-- <div class="float-right mt-1"><a id="forgot" href="javascript:void(0);">Forgot Password?</a></div> -->
+					<div class="float-right mt-1"><a id="forgot" href="javascript:void(0);">Forgot Password?</a></div>
 				</div>
 				<div class="text-center">
 					<button class="btn_1 full-width">Log In</button>
-					<!-- <input type="submit" value="Log In" class="btn_1 full-width"> -->
 					Don’t have an account? <a href="#!">Sign up</a>
 				</div>
 				<div id="forgot_pw">
