@@ -28,3 +28,10 @@ Route::group([
     Route::post('me', 'AuthController@me');
 
 });
+
+### Categories
+Route::get('categories', 'CategoryController@index');
+Route::get('parent-categories', 'CategoryController@parentCategories');
+Route::post('category', 'CategoryController@store');
+Route::post('category/{category}', 'CategoryController@update');
+Route::delete('category/{category}', 'CategoryController@destroy');

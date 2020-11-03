@@ -1,4 +1,7 @@
 export default {
     sidebarShow: 'responsive',
-    sidebarMinimize: false
+    sidebarMinimize: false,
+    parentCategories: [
+        { value: '', label: 'Please Select Parent Category' }
+    ]
 };

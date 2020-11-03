@@ -1,8 +1,10 @@
 import User from '../helpers/user';
 import Home from '../components/frontend/HomePage';
 import Account from '../components/auth/Account';
+// Admin Dashboard
 import TheContainer from '../components/admin/TheContainer';
 import Dashboard from '../components/admin/Dashboard';
+import Categories from '../components/admin/pages/Categories';
 
 function requireAuth(to, from, next) {
     let auth = User.loggedIn();
@@ -22,11 +24,12 @@ export const routes = [
     {
         path: '/admin',
         redirect: '/admin/dashboard',
-        name: 'admin',
+        name: 'Admin',
         component: TheContainer,
         beforeEnter: requireAuth,
         children: [
-            { path: 'dashboard', name: 'dashboard', component: Dashboard },
+            { path: 'dashboard', name: 'Dashboard', component: Dashboard },
+            { path: 'categories', name: 'Categories', component: Categories },
         ]
     },
 ];

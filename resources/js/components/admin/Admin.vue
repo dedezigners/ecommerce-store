@@ -4,7 +4,15 @@
 
 <script>
 export default {
-    
+    name: 'admin',
+    created() {
+        this.initStoreData();
+    },
+    methods: {
+        initStoreData() {
+            this.$store.dispatch('getParentCategories');
+        }
+    }
 }
 </script>
 

@@ -9,5 +9,10 @@ export default {
     },
     set (state, [variable, value]) {
         state[variable] = value
+    },
+    saveParentCategories (state, parentCategories) {
+        parentCategories.forEach(category => {
+            state.parentCategories.push(category);
+        });
     }
 };
