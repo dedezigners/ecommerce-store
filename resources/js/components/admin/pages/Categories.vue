@@ -74,20 +74,6 @@
         :close-on-esc="false" :centered="true"
         title="Modal title 2" size="lg" color="dark">
             <CForm enctype="multipart/form-data">
-
-                <div v-if="errors && errors.length">
-                    <div class="errors" v-for="(error, index) in errors" :key="index">
-                        <CAlert color="danger">{{ error }}</CAlert>
-                    </div>
-                </div>
-
-                <!-- <CInputFile
-                label="Upload Image" @change="onFileSelected"
-                accept="image/png, image/jpeg, image/bmp" horizontal /> -->
-
-                <!-- <div v-if="form.uploadImage" class="text-center image-modal">
-                    <img :src="form.uploadImage" :alt="form.name">
-                </div> -->
                 
                 <CInput
                 label="Category Name *" placeholder="Category Name"

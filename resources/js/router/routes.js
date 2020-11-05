@@ -5,6 +5,7 @@ import Account from '../components/auth/Account';
 import TheContainer from '../components/admin/TheContainer';
 import Dashboard from '../components/admin/Dashboard';
 import Categories from '../components/admin/pages/Categories';
+import Attributes from '../components/admin/pages/Attributes';
 
 function requireAuth(to, from, next) {
     let auth = User.loggedIn();
@@ -30,6 +31,7 @@ export const routes = [
         children: [
             { path: 'dashboard', name: 'Dashboard', component: Dashboard },
             { path: 'categories', name: 'Categories', component: Categories },
+            { path: 'attributes', name: 'Attributes', component: Attributes },
         ]
     },
 ];

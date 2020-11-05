@@ -14,6 +14,10 @@ import { iconsSet as icons } from './assets/icons/icons.js';
 Vue.config.performance = true;
 Vue.use(CoreuiVue);
 
+import Multiselect from 'vue-multiselect';
+Vue.component('multiselect', Multiselect);
+
+
 new Vue({
     el: '#app',
     router,

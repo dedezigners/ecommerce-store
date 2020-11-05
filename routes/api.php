@@ -35,3 +35,9 @@ Route::get('parent-categories', 'CategoryController@parentCategories');
 Route::post('category', 'CategoryController@store');
 Route::post('category/{category}', 'CategoryController@update');
 Route::delete('category/{category}', 'CategoryController@destroy');
+
+### Attributes
+Route::get('attributes', 'AttributeController@index');
+Route::post('attribute', 'AttributeController@store');
+Route::post('attribute/{attribute}', 'AttributeController@update');
+Route::delete('attribute/{attribute}', 'AttributeController@destroy');

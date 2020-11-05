@@ -5,7 +5,7 @@ export default [
       { _name: 'CSidebarNavItem', name: 'Dashboard', to: '/admin/dashboard', icon: 'cil-speedometer' },
       { _name: 'CSidebarNavTitle', _children: ['Store'] },
       { _name: 'CSidebarNavItem', name: 'Categories', to: '/admin/categories', icon: 'cil-apps' },
-      { _name: 'CSidebarNavItem', name: 'Tags', to: '/admin/categories', icon: 'cil-apps' },
+      { _name: 'CSidebarNavItem', name: 'Attributes', to: '/admin/attributes', icon: 'cil-apps' },
       { _name: 'CSidebarNavItem', name: 'Products', to: '/admin/categories', icon: 'cil-apps' },
       { _name: 'CSidebarNavItem', name: 'Orders', to: '/admin/categories', icon: 'cil-apps' },
       { _name: 'CSidebarNavTitle', _children: ['Template Settings'] },
