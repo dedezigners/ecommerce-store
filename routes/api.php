@@ -29,6 +29,9 @@ Route::group([
 
 });
 
+### MEDIA
+Route::get('media', 'MediaController@index');
+
 ### Categories
 Route::get('categories', 'CategoryController@index');
 Route::get('parent-categories', 'CategoryController@parentCategories');

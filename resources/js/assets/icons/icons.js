@@ -84,7 +84,10 @@ import {
   cilApps,
   cilMusicNote,
   cilCommand,
-
+  cilCamera,
+  cil3d,
+  cilCart,
+  cilNewspaper,
 } from '@coreui/icons'
 import { logo } from './logo'
 
@@ -144,6 +147,10 @@ export const iconsSet = Object.assign(
     cilApps,
     cilMusicNote,
     cilCommand,
+    cilCamera,
+    cil3d,
+    cilCart,
+    cilNewspaper,
   },
   {
     cifUs,

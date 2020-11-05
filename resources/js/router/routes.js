@@ -4,8 +4,10 @@ import Account from '../components/auth/Account';
 // Admin Dashboard
 import TheContainer from '../components/admin/TheContainer';
 import Dashboard from '../components/admin/Dashboard';
+import Media from '../components/admin/pages/Media';
 import Categories from '../components/admin/pages/Categories';
 import Attributes from '../components/admin/pages/Attributes';
+import Products from '../components/admin/pages/Products';
 
 function requireAuth(to, from, next) {
     let auth = User.loggedIn();
@@ -30,8 +32,10 @@ export const routes = [
         beforeEnter: requireAuth,
         children: [
             { path: 'dashboard', name: 'Dashboard', component: Dashboard },
+            { path: 'media', name: 'Media', component: Media },
             { path: 'categories', name: 'Categories', component: Categories },
             { path: 'attributes', name: 'Attributes', component: Attributes },
+            { path: 'products', name: 'Products', component: Products },
         ]
     },
 ];
