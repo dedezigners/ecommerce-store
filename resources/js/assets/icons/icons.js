@@ -88,6 +88,7 @@ import {
   cil3d,
   cilCart,
   cilNewspaper,
+  cilCloudUpload
 } from '@coreui/icons'
 import { logo } from './logo'
 
@@ -151,6 +152,7 @@ export const iconsSet = Object.assign(
     cil3d,
     cilCart,
     cilNewspaper,
+    cilCloudUpload
   },
   {
     cifUs,

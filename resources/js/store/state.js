@@ -3,5 +3,6 @@ export default {
     sidebarMinimize: false,
     parentCategories: [
         { value: '', label: 'Please Select Parent Category' }
-    ]
+    ],
+    mediaLibrary: []
 };

@@ -11,6 +11,7 @@ export default {
     methods: {
         initStoreData() {
             this.$store.dispatch('getParentCategories');
+            this.$store.dispatch('getMediaLibrary');
         }
     }
 }

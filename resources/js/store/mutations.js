@@ -14,5 +14,15 @@ export default {
         parentCategories.forEach(category => {
             state.parentCategories.push(category);
         });
+    },
+    saveMediaLibrary (state, mediaLibrary) {
+        mediaLibrary.forEach(media => {
+            state.mediaLibrary.push(media);
+        });
+    },
+    saveUnshiftMediaLibrary (state, mediaLibrary) {
+        mediaLibrary.forEach(media => {
+            state.mediaLibrary.unshift(media);
+        });
     }
 };

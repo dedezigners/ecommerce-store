@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Media extends Model
 {
@@ -17,5 +18,10 @@ class Media extends Model
         static::creating(function($category) {
             $category->user_id = auth()->id();
         });
+    }
+
+    public function getLinkAttribute()
+    {
+        return asset('storage/' . $this->path);
     }
 }

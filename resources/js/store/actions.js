@@ -8,7 +8,21 @@ export default {
                     label: category.name
                 });
             });
+
             commit('saveParentCategories', parentCategories);
         });
+    },
+    getMediaLibrary({ commit }) {
+        let mediaLibrary = [];
+        axios.get('media').then(res => {
+            res.data.data.forEach(media => {
+                mediaLibrary.push(media);
+            });
+
+            commit('saveMediaLibrary', mediaLibrary);
+        });
+    },
+    saveMediaLibraryData({ commit }, mediaData) {
+        commit('saveUnshiftMediaLibrary', mediaData);
     }
 };

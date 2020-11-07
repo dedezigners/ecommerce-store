@@ -31,6 +31,7 @@ Route::group([
 
 ### MEDIA
 Route::get('media', 'MediaController@index');
+Route::post('media', 'MediaController@store');
 
 ### Categories
 Route::get('categories', 'CategoryController@index');
