@@ -2,21 +2,19 @@
     <div>
         <CRow>
             <CCol col="12" xl="12">
-                <input type="file" ref="file" style="display: none" multiple @change="onFileSelected" />
-                
-                <div class="h6 alert alert-danger" v-if="error">{{ error }}</div>
-                
-                <h3>
-                    Media Library
+
+                <div class="page">
+                    <input type="file" ref="file" style="display: none" multiple @change="onFileSelected" />
+                    <h2 class="page--heading">{{ $route.name }}</h2>
                     <CButton
+                    class="page--action"
                     color="primary" size="sm" variant="outline"
                     @click="$refs.file.click()">
                     <CIcon name="cil-cloud-upload"/>&nbsp; Add Media</CButton>
-                </h3>
-                <hr />
-            </CCol>
+                </div>
 
-            <CCol col="12" xl="12">
+                <div class="h6 alert alert-danger" v-if="error">{{ error }}</div>
+
                 <div class="media-wrapper">
                     <div
                     v-for="item in mediaLibrary"

@@ -41967,8 +41967,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 var PAGES = Object.freeze({
   CREATE_DATA: 'CREATE_DATA',
   UPDATE_DATA: 'UPDATE_DATA',
@@ -42184,7 +42182,6 @@ var BUTTONS = Object.freeze({
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
 //
 //
 //
@@ -42565,8 +42562,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'media',
@@ -42644,7 +42639,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _johmun_vue_tags_input__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @johmun/vue-tags-input */ "./node_modules/@johmun/vue-tags-input/dist/vue-tags-input.js");
 /* harmony import */ var _johmun_vue_tags_input__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_johmun_vue_tags_input__WEBPACK_IMPORTED_MODULE_0__);
-//
 //
 //
 //
@@ -83144,40 +83138,37 @@ var render = function() {
             { attrs: { col: "12", xl: "12" } },
             [
               _c(
-                "CCard",
+                "div",
+                { staticClass: "page" },
                 [
-                  _c("CCardHeader", [
-                    _c("span", { staticClass: "h4" }, [
-                      _vm._v(_vm._s(_vm.$route.name))
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "card-header-actions" },
-                      [
-                        _c(
-                          "CButton",
-                          {
-                            directives: [
-                              {
-                                name: "c-tooltip",
-                                rawName: "v-c-tooltip.hover.click",
-                                value: "Create",
-                                expression: "'Create'",
-                                modifiers: { hover: true, click: true }
-                              }
-                            ],
-                            attrs: { size: "sm", color: "success" },
-                            on: { click: _vm.goToCreate }
-                          },
-                          [_c("CIcon", { attrs: { name: "cil-plus" } })],
-                          1
-                        )
-                      ],
-                      1
-                    )
+                  _c("h2", { staticClass: "page--heading" }, [
+                    _vm._v(_vm._s(_vm.$route.name))
                   ]),
                   _vm._v(" "),
+                  _c(
+                    "CButton",
+                    {
+                      staticClass: "page--action",
+                      attrs: {
+                        color: "primary",
+                        size: "sm",
+                        variant: "outline"
+                      },
+                      on: { click: _vm.goToCreate }
+                    },
+                    [
+                      _c("CIcon", { attrs: { name: "cil-plus" } }),
+                      _vm._v("  Create Attribute")
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "CCard",
+                [
                   _c(
                     "CCardBody",
                     [
@@ -83578,40 +83569,37 @@ var render = function() {
             { attrs: { col: "12", xl: "12" } },
             [
               _c(
-                "CCard",
+                "div",
+                { staticClass: "page" },
                 [
-                  _c("CCardHeader", [
-                    _c("span", { staticClass: "h4" }, [
-                      _vm._v(_vm._s(_vm.$route.name))
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "card-header-actions" },
-                      [
-                        _c(
-                          "CButton",
-                          {
-                            directives: [
-                              {
-                                name: "c-tooltip",
-                                rawName: "v-c-tooltip.hover.click",
-                                value: "Create",
-                                expression: "'Create'",
-                                modifiers: { hover: true, click: true }
-                              }
-                            ],
-                            attrs: { size: "sm", color: "success" },
-                            on: { click: _vm.goToCreate }
-                          },
-                          [_c("CIcon", { attrs: { name: "cil-plus" } })],
-                          1
-                        )
-                      ],
-                      1
-                    )
+                  _c("h2", { staticClass: "page--heading" }, [
+                    _vm._v(_vm._s(_vm.$route.name))
                   ]),
                   _vm._v(" "),
+                  _c(
+                    "CButton",
+                    {
+                      staticClass: "page--action",
+                      attrs: {
+                        color: "primary",
+                        size: "sm",
+                        variant: "outline"
+                      },
+                      on: { click: _vm.goToCreate }
+                    },
+                    [
+                      _c("CIcon", { attrs: { name: "cil-plus" } }),
+                      _vm._v("  Create Category")
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "CCard",
+                [
                   _c(
                     "CCardBody",
                     [
@@ -84028,26 +84016,25 @@ var render = function() {
         "CRow",
         [
           _c("CCol", { attrs: { col: "12", xl: "12" } }, [
-            _c("input", {
-              ref: "file",
-              staticStyle: { display: "none" },
-              attrs: { type: "file", multiple: "" },
-              on: { change: _vm.onFileSelected }
-            }),
-            _vm._v(" "),
-            _vm.error
-              ? _c("div", { staticClass: "h6 alert alert-danger" }, [
-                  _vm._v(_vm._s(_vm.error))
-                ])
-              : _vm._e(),
-            _vm._v(" "),
             _c(
-              "h3",
+              "div",
+              { staticClass: "page" },
               [
-                _vm._v("\n                Media Library\n                "),
+                _c("input", {
+                  ref: "file",
+                  staticStyle: { display: "none" },
+                  attrs: { type: "file", multiple: "" },
+                  on: { change: _vm.onFileSelected }
+                }),
+                _vm._v(" "),
+                _c("h2", { staticClass: "page--heading" }, [
+                  _vm._v(_vm._s(_vm.$route.name))
+                ]),
+                _vm._v(" "),
                 _c(
                   "CButton",
                   {
+                    staticClass: "page--action",
                     attrs: { color: "primary", size: "sm", variant: "outline" },
                     on: {
                       click: function($event) {
@@ -84065,10 +84052,12 @@ var render = function() {
               1
             ),
             _vm._v(" "),
-            _c("hr")
-          ]),
-          _vm._v(" "),
-          _c("CCol", { attrs: { col: "12", xl: "12" } }, [
+            _vm.error
+              ? _c("div", { staticClass: "h6 alert alert-danger" }, [
+                  _vm._v(_vm._s(_vm.error))
+                ])
+              : _vm._e(),
+            _vm._v(" "),
             _c(
               "div",
               { staticClass: "media-wrapper" },
@@ -84123,40 +84112,41 @@ var render = function() {
             { attrs: { col: "12", xl: "12" } },
             [
               _c(
-                "CCard",
+                "div",
+                { staticClass: "page" },
                 [
-                  _c("CCardHeader", [
-                    _c("span", { staticClass: "h4" }, [
-                      _vm._v(_vm._s(_vm.$route.name))
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "card-header-actions" },
-                      [
-                        _c(
-                          "CButton",
-                          {
-                            directives: [
-                              {
-                                name: "c-tooltip",
-                                rawName: "v-c-tooltip.hover.click",
-                                value: "Create",
-                                expression: "'Create'",
-                                modifiers: { hover: true, click: true }
-                              }
-                            ],
-                            attrs: { size: "sm", color: "success" },
-                            on: { click: _vm.goToCreate }
-                          },
-                          [_c("CIcon", { attrs: { name: "cil-plus" } })],
-                          1
-                        )
-                      ],
-                      1
-                    )
+                  _c("h2", { staticClass: "page--heading" }, [
+                    _vm._v(_vm._s(_vm.$route.name))
                   ]),
                   _vm._v(" "),
+                  _c(
+                    "CButton",
+                    {
+                      staticClass: "page--action",
+                      attrs: {
+                        color: "primary",
+                        size: "sm",
+                        variant: "outline"
+                      },
+                      on: {
+                        click: function($event) {
+                          return _vm.$refs.file.click()
+                        }
+                      }
+                    },
+                    [
+                      _c("CIcon", { attrs: { name: "cil-plus" } }),
+                      _vm._v("  Create Product")
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "CCard",
+                [
                   _c(
                     "CCardBody",
                     [

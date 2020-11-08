@@ -2,18 +2,17 @@
     <div>
         <CRow>
             <CCol col="12" xl="12">
+
+                <div class="page">
+                    <h2 class="page--heading">{{ $route.name }}</h2>
+                    <CButton
+                    class="page--action"
+                    color="primary" size="sm" variant="outline"
+                    @click="goToCreate">
+                    <CIcon name="cil-plus"/>&nbsp; Create Category</CButton>
+                </div>
+
                 <CCard>
-                    <CCardHeader>
-                        <span class="h4">{{ $route.name }}</span>
-                        <div class="card-header-actions">
-                            <CButton
-                            size="sm" color="success"
-                            @click="goToCreate"
-                            v-c-tooltip.hover.click="'Create'">
-                                <CIcon name="cil-plus"/>
-                            </CButton>
-                        </div>
-                    </CCardHeader>
                     <CCardBody>
                         <CDataTable
                         hover
