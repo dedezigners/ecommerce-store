@@ -5,11 +5,9 @@
 
                 <div class="page">
                     <h2 class="page--heading">{{ $route.name }}</h2>
-                    <CButton
-                    class="page--action"
-                    color="primary" size="sm" variant="outline"
-                    @click="$refs.file.click()">
-                    <CIcon name="cil-plus"/>&nbsp; Create Product</CButton>
+                    <router-link to="product/create"
+                    class="btn page--action btn-outline-primary btn-sm">
+                    <CIcon name="cil-plus"/>&nbsp; Create Product</router-link>
                 </div>
 
                 <CCard>

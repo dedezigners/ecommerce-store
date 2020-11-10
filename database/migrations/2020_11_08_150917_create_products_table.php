@@ -30,6 +30,7 @@ class CreateProductsTable extends Migration
             $table->text('short_intro')->nullable();
             $table->longtext('detail_intro')->nullable();
 
+            $table->foreignId('category_id')->constrained();
             $table->foreignId('featured')->constrained('media')->nullable();
             $table->foreignId('secondary')->constrained('media')->nullable();
             $table->foreignId('user_id')->constrained();

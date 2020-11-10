@@ -8,6 +8,7 @@ import Media from '../components/admin/pages/Media';
 import Categories from '../components/admin/pages/Categories';
 import Attributes from '../components/admin/pages/Attributes';
 import Products from '../components/admin/pages/Products';
+import CreateProduct from '../components/admin/pages/product/CreateProduct';
 
 function requireAuth(to, from, next) {
     let auth = User.loggedIn();
@@ -36,6 +37,7 @@ export const routes = [
             { path: 'categories', name: 'Categories', component: Categories },
             { path: 'attributes', name: 'Attributes', component: Attributes },
             { path: 'products', name: 'Products', component: Products },
+            { path: 'product/create', name: 'Create Product', component: CreateProduct },
         ]
     },
 ];

@@ -17,3 +17,5 @@ Route::get('/', function () { return view('index'); });
 Route::get('/admin', function () { return view('admin'); });
 Route::get('/{slug}', function () { return view('index'); });
 Route::get('/admin/{slug}', function () { return view('admin'); });
+Route::get('/{slug}/{info}', function () { return view('index'); });
+Route::get('/admin/{slug}/{info}', function () { return view('admin'); });
